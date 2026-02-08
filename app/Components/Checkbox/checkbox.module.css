@@ -1,0 +1,49 @@
+.checkboxWrapper *,
+.checkboxWrapper ::after,
+.checkboxWrapper ::before {
+    box-sizing: border-box;
+}
+
+.checkboxWrapper {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox+label:before {
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    color: rgb(var(--border));
+    border: solid 1px;
+    border-radius: 0.25rem;
+    background:
+        url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ffffff' stroke-width='1.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m4.5 12.75 6 6 9-13.5'/%3E%3C/svg%3E") no-repeat center,
+        white;
+    background-size: 0;
+    will-change: color, border, background, background-size, box-shadow;
+    transition: color 0.1s, border 0.1s, background 0.15s, box-shadow 0.1s;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkbox:checked+label:before {
+    background-color: rgb(var(--primary-accent));
+    background-size: 0.75em;
+    color: rgba(0, 0, 0, 0.075);
+}
+
+.checkbox+label {
+    -webkit-user-select: none;
+    user-select: none;
+    width: 1rem;
+    height: 1rem;
+    display: block;
+}

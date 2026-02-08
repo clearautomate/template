@@ -1,0 +1,51 @@
+.mcGrid {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* IMPORTANT: allow row spacing + rounded corners */
+.mcGrid table {
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+    /* vertical row gap */
+    width: 100%;
+}
+
+.mcGrid th {
+    padding: 1rem;
+}
+
+.mcGrid td {
+    padding: 1rem;
+    text-align: center;
+    background: rgba(var(--border), 0.25);
+    /* move background to cells */
+}
+
+/* Left-align first column */
+.mcGrid th:first-child,
+.mcGrid td:first-child {
+    text-align: left;
+}
+
+/* Rounded row corners (apply to edge cells) */
+.mcGrid tbody tr td:first-child {
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.mcGrid tbody tr td:last-child {
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+/* Radio styling */
+.mcGrid td input[type='radio'] {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.mcGrid td input[type='radio']:checked {
+    accent-color: rgb(var(--primary-accent));
+}

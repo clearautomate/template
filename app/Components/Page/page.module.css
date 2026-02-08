@@ -1,0 +1,11 @@
+.container {
+    margin: 2rem 2rem;
+}
+
+.pageHeader {
+    margin-bottom: 2rem;
+}
+
+.pageHeader p {
+    color: rgb(var(--text-muted));
+}

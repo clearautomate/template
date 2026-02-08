@@ -1,0 +1,104 @@
+/* ===============================
+   Base Button
+================================ */
+.button {
+    all: unset;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.5rem 1rem;
+
+    font-weight: 600;
+    line-height: 1;
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        opacity 0.15s ease;
+}
+
+/* ===============================
+   Icon Only Button
+================================ */
+.iconOnly {
+    padding: 0.25rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    aspect-ratio: 1 / 1;
+}
+
+/* Icon sizing */
+.button:not(.iconOnly) svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+    pointer-events: none;
+}
+
+.iconOnly svg {
+    width: 75%;
+    max-width: 100%;
+    max-height: 100%;
+    pointer-events: none;
+}
+
+/* ===============================
+   Layout Modifiers
+================================ */
+.fullWidth {
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+/* ===============================
+   States
+================================ */
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* ===============================
+   Shape
+================================ */
+.rounded {
+    border-radius: var(--border-radius);
+}
+
+/* ===============================
+   Variants
+================================ */
+.primary {
+    background-color: rgb(var(--primary-accent));
+    color: rgb(var(--foreground));
+}
+
+.primary:hover {
+    background-color: rgb(var(--primary-accent-hover));
+}
+
+.foreground {
+    background-color: rgb(var(--foreground));
+    color: rgb(var(--text-muted))
+}
+
+.foreground:hover {
+    background-color: rgb(var(--border));
+}
+
+/* ===============================
+   Focus (Accessible)
+================================ */
+.button:focus-visible {
+    outline: 2px solid rgb(var(--primary-accent-hover));
+    outline-offset: 2px;
+}

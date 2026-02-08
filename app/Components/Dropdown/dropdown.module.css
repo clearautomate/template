@@ -1,0 +1,30 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.select {
+    width: 100%;
+    padding: 0.5rem 2.25rem 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgb(var(--border));
+    background: rgb(var(--foreground));
+    color: rgb(var(--text));
+    appearance: none;
+    cursor: pointer;
+}
+
+/* Optional chevron */
+.wrapper::after {
+    content: '';
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-right: 2px solid rgb(var(--text-muted));
+    border-bottom: 2px solid rgb(var(--text-muted));
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+}

@@ -1,0 +1,27 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(var(--border));
+}
+
+.pagination>* {
+    border-right: 1px solid rgb(var(--border)) !important;
+}
+
+.pageInput {
+    all: unset;
+    display: flex;
+    align-items: center;
+    padding: 0 6px 0 12px;
+    width: 48px;
+    height: 100%;
+    color: rgb(var(--text-muted));
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 12px;
+    color: rgb(var(--text-muted));
+}

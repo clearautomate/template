@@ -1,0 +1,15 @@
+.container {
+    border-top: 1px solid rgb(var(--border));
+    display: flex;
+}
+
+.iconContainer {
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0.75rem;
+}
+
+.icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}

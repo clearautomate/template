@@ -1,0 +1,67 @@
+.container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.sortIconBtn {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    padding: 0.25rem;
+    color: rgb(var(--text-muted));
+}
+
+.sortIconBtn:hover {
+    background: rgb(var(--border));
+    border-radius: var(--border-radius);
+}
+
+.sortMenu {
+    font-weight: normal;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(var(--foreground));
+    border: 1px solid rgb(var(--border));
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    z-index: 10;
+    min-width: 120px;
+    padding: 0.5rem;
+    width: max-content;
+}
+
+.sortMenu button {
+    all: unset;
+    cursor: pointer;
+    display: block;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    width: calc(100% - 1rem);
+    /* color: rgb(var(--text)); */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sortMenu button:hover {
+    background: rgba(var(--border), 0.5);
+}
+
+.sortButtonText {
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.sortIcon {
+    width: 1rem;
+    height: 1rem;
+}

@@ -1,0 +1,41 @@
+.wrapper {
+    position: relative;
+}
+
+.filterContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    width: 75dvw;
+    max-width: 400px;
+    height: 50dvh;
+    max-height: 300px;
+    overflow: scroll;
+    z-index: 999;
+    border: 1px solid rgb(var(--border));
+    background: rgb(var(--foreground));
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+}
+
+.filterGroupActions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.filterGroupLeftActions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filterGroupContent {
+    margin-left: 2.5rem;
+    display: flex;
+}

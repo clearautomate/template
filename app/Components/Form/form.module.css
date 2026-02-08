@@ -1,0 +1,11 @@
+.wrapper {
+    background: rgb(var(--foreground));
+    /* background: linear-gradient(160deg,
+            rgba(13, 0, 255, 0.2) 0px,
+            rgba(13, 0, 255, 0.1) 100px,
+            rgba(var(--foreground), 1) 100%); */
+    padding: 1rem;
+    border: 1px solid rgb(var(--border));
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}

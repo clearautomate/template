@@ -1,0 +1,13 @@
+.activeRow {
+    background-color: rgba(var(--primary-accent), 0.12);
+}
+
+.textInput {
+    all: unset;
+    padding: 10px 12px;
+    height: 100%;
+}
+
+.textInput:focus {
+    outline: 1px solid rgb(var(--primary-accent));
+}

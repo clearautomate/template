@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.star {
+    all: unset;
+    cursor: pointer;
+}
+
+.star svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.solidStar {
+    color: rgb(var(--warning));
+}

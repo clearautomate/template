@@ -1,0 +1,20 @@
+Crud Table
+ - row check mark selector
+ - bulk edit
+ - single modal view
+ - field rendering
+  - Currency
+  - Percent
+  - Success Chip
+  - Chip
+  - User
+  - 
+  - custom field rendering
+ - Filter by field
+ - Data types
+  - Text
+  - Textarea
+  - Dropdown
+  - User
+ - New record form
+  - Uses form component

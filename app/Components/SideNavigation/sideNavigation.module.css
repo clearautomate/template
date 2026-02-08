@@ -1,0 +1,100 @@
+.navWrapper {
+    background: rgb(var(--foreground));
+    height: 100vh;
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    top: 0;
+}
+
+.toggleButtonWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    gap: 0.5rem;
+}
+
+/* Logo */
+.logoWrapper {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logoWrapper img {
+    max-width: 100%;
+    max-height: 48px;
+    object-fit: contain;
+}
+
+.logoutWrapper p {}
+
+/* Links */
+.linksWrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 0.75rem;
+    gap: 6px;
+    flex: 1;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: rgb(var(--text));
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.link:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.activeLink {
+    background: rgba(0, 0, 0, 0.05);
+    color: rgb(var(--primary-accent));
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Logout */
+.logoutWrapper {
+    padding: 1rem;
+}
+
+/* Profile */
+.profileWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.profileImg {
+    width: 48px;
+    height: 48px;
+    border-radius: 500px;
+    object-fit: cover;
+}
+
+.profileLabel {
+    font-weight: 600;
+}
+
+.profileRole {
+    color: rgb(var(--text-muted));
+}

@@ -1,0 +1,139 @@
+.container {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background: rgb(var(--foreground));
+}
+
+/* Scroll container */
+.tableContainer {
+    flex: 1;
+    overflow: auto;
+}
+
+/* Table */
+.table {
+    min-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    position: relative;
+}
+
+/* Header */
+.table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: var(--table-header-bg);
+
+    /* Header grid lines */
+    box-shadow:
+        inset 0 1px 0 rgba(var(--border), 1),
+        /* top */
+        inset -1px 0 0 rgba(var(--border), 1),
+        /* right */
+        inset 0 -1px 0 rgba(var(--border), 1);
+    /* bottom */
+}
+
+/* Cells (NO native borders) */
+.table th,
+.table td {
+    text-align: left;
+    color: rgb(var(--text-muted));
+    white-space: nowrap;
+    border: none;
+
+    /* Soft grid lines */
+    box-shadow:
+        inset -1px 0 0 rgba(var(--border), 1),
+        /* right */
+        inset 0 -1px 0 rgba(var(--border), 1);
+    /* bottom */
+}
+
+/* Left edge border (body cells only) */
+.table tbody td:first-child {
+    box-shadow:
+        inset 1px 0 0 rgba(var(--border), 1),
+        /* left */
+        inset -1px 0 0 rgba(var(--border), 1),
+        /* right */
+        inset 0 -1px 0 rgba(var(--border), 1);
+    /* bottom */
+}
+
+/* FIRST HEADER CELL — restores top border */
+.table thead th:first-child {
+    box-shadow:
+        inset 0 1px 0 rgba(var(--border), 1),
+        /* top */
+        inset 1px 0 0 rgba(var(--border), 1),
+        /* left */
+        inset -1px 0 0 rgba(var(--border), 1),
+        /* right */
+        inset 0 -1px 0 rgba(var(--border), 1);
+    /* bottom */
+}
+
+/* Header content layout */
+.headerCell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    z-index: 5;
+    padding: 0.75rem 1rem;
+}
+
+.headerLabel {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(var(--text-primary));
+}
+
+.headerCellContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.headerFieldType {
+    font-family: monospace;
+    font-weight: normal;
+    color: rgba(var(--text-muted), 0.75);
+    text-transform: lowercase;
+}
+
+/* Row states */
+.table tbody tr:not(.activeRow):not(.checkboxCell):hover {
+    background-color: var(--table-row-hover-bg);
+}
+
+.activeRow {
+    background-color: var(--table-row-active-bg);
+}
+
+.table tbody tr:nth-child(even):not(.activeRow):not(.checkboxCell) {
+    background-color: var(--table-row-light-bg);
+}
+
+.table tbody tr:nth-child(odd):not(.activeRow):not(.checkboxCell) {
+    background-color: var(--table-row-dark-bg);
+}
+
+/* Sticky checkbox column */
+.checkboxCell {
+    position: sticky;
+    left: 0;
+    background: rgb(var(--foreground));
+    padding: 0 0.5rem;
+    z-index: 10;
+}
+
+/* Empty state */
+.emptyState {
+    text-align: center;
+    margin: 2rem 0;
+}
